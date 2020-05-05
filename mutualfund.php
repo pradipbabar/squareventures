@@ -1,0 +1,527 @@
+<?php   
+    if (isset($_POST['name'])){
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+
+    $con = mysqli_connect( $server, $username,  $password);
+
+    // if(!$con){
+    //     die("connect to database due to ".mysqli_connect_error());
+
+    // }
+    // echo "connecton successfuly";
+    $name = $_POST['name'];
+    $location = $_POST['location'];
+    $pno = $_POST['pno'];
+    
+    $sql="INSERT INTO `square ventures wealth management`. `login` (`name`, `location`, `phone_no`, `date`) VALUES ( '$name', '$location', ' $pno', current_timestamp());";
+ 
+  if ($con->query($sql)==true){
+      
+
+  }
+  else{
+      echo "error: $sql <br> $con->error";
+  }
+
+  $con->close();
+
+}
+
+?> 
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Square Ventures Wealth Management </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Square Ventures Wealth Management">
+    <meta name="description" content=" A mutual fund is a type of investment vehicle consisting of a portfolio of stocks, bonds, or other securities. ">
+    <meta name="keywords" content="MUTUAL FUND ,FIXED DEPOSIT,BONDS,LIFE INSURANCE,DEMAT ACCOUNT,HEALT-INSURANCE , trad">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/title_logo.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid ">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"></a>
+                                    <img class="logohight" src="./img/Capture-removebg-preview.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">home</a></li>
+                                            <li><a href="loan.html">how to trade</a></li>
+                                            <li><a href="about.html">about</a></li>
+                                           
+                                          
+                                           
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="Appointment">
+                                    <div class="phone_num d-none d-xl-block">
+                                        <a href="#"> <i class="fa fa-phone"></i> +91 83083 19430 </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <!-- header-end -->
+
+      <!-- bradcam_area  -->
+      <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Mutual  Fund</h3>
+                    </div>
+                    <form style="padding-top: 20px;" class="form-contact contact_form" method="POST" action="./mutualfund.php">
+                        <div class="form"  >
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                   
+                                        <input style="background-color:white; border-radius: 10px;" style="background-color:aliceblue; border-radius: 10px;" type="text" name="name" class="form-control" id="name" placeholder="enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input style="background-color:white; border-radius: 10px;"  type="text"  class="form-control" name="location" id="location" placeholder="enter your location">
+                                     </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <input style="background-color:white; border-radius: 10px; width: 330px;"  type="text"  class="form-control" name="pno" id="pno" placeholder="enter your phone number">
+                                        </div>
+                                    </div>
+                                     </div>
+                                </div>
+                            
+                    
+                                <div class="form-group mt-3">
+                            <button style=" border-radius: 10px;  color: white;" class="button button-contactForm btn_4 boxed-btn" >Continue</button>
+                                </div>
+                        </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+
+
+    <!-- accordion_area_start  -->
+    <div class=" Mutual extra_padding">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-6">
+                    <div class="faq_ask pl-68">
+                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">What is mutual fund?</h3>
+                            <div id="accordion">
+                                <div class="card wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".3s">
+                                
+                                    <div id="collapseOnee" class="collapse show" aria-labelledby="headingOnee" data-parent="#accordion">
+                                      <div class="card-body">
+                                        A mutual fund is an investment security that enables investors to pool their money together into one professionally managed investment.
+                                    </div>
+                                  </div>
+                                  <div class="card wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".3s">
+                                    <div class="card-header" id="headingOnee">
+                                      <h5 class="mb-0">
+                                      
+                                      WHAT IS  LUMPSUM INVESTMENT?
+                                        
+                                      </h5>
+                                    </div>
+                                
+                                    <div id="collapseOnee" class="collapse show" aria-labelledby="headingOnee" data-parent="#accordion">
+                                      <div class="card-body">
+                                        One - time investment
+Recommended for people who want to invest larger amount all at once.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".3s">
+                                    <div class="card-header" id="headingOnee">
+                                      <h5 class="mb-0">
+                                      
+                                          WHAT IS SYSTEMATIC INVESTMENT PLAN (SIP)?
+                                        
+                                      </h5>
+                                    </div>
+                                
+                                    <div id="collapseOnee" class="collapse show" aria-labelledby="headingOnee" data-parent="#accordion">
+                                      <div class="card-body">
+                                        Small regular investments Recommended for people who want to invest small amount of money every month.
+                                      </div>
+                                    </div>
+                                  </div>
+                              
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ accordion_area_end  -->
+
+    <!-- works_area_start  -->
+    <div class="works_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title text-center mb-90">
+                        <span class="wow lightSpeedIn" data-wow-duration="1s" data-wow-delay=".1s"></span>
+                        <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">Why mutual funds "Sahi hai"</h3>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">Because you need to do something with your money, honey!
+
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div style="text-align: center;" class="single_works wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <span class="spanindex">
+                            01
+                        </span>
+                        <h3>Higher  returns lower rise</h3>
+                        <p>Better returns than FD & lower risk than single stock investment</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div style="text-align: center;"  class="single_works wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <span class="spanindex">
+                            02
+                        </span>
+                        <h3>Diversified risk</h3>
+                        <p>Your money doesn't go into a single stock but a group of companies.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div style="text-align: center;"  class="single_works wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                        <span class="spanindex">
+                            03
+                        </span>
+                        <h3>Professionally managed</h3>
+                        <p>Stock market industry leaders manage your funds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ works_area_end  -->
+
+    <!-- testimonial_area  -
+    <div class="testimonial_area  ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="testmonial_active owl-carousel">
+                        <div class="single_carousel">
+                            <div class="row">
+                                <div class="col-lg-11">
+                                    <div class="single_testmonial d-flex align-items-center">
+                                        <div class="thumb">
+                                            <img src="img/testmonial/author.png" alt="">
+                                            <div class="quote_icon">
+                                                <i class="Flaticon flaticon-quote"></i>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering through animal welfare when people might depend on livestock as their only source of income or food.</p>
+                                            <span>- Micky Mouse</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_carousel">
+                            <div class="row">
+                                <div class="col-lg-11">
+                                    <div class="single_testmonial d-flex align-items-center">
+                                        <div class="thumb">
+                                            <img src="img/testmonial/author.png" alt="">
+                                            <div class="quote_icon">
+                                                <i class=" Flaticon flaticon-quote"></i>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering through animal welfare when people might depend on livestock as their only source of income or food.</p>
+                                            <span>- Micky Mouse</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_carousel">
+                            <div class="row">
+                                <div class="col-lg-11">
+                                    <div class="single_testmonial d-flex align-items-center">
+                                        <div class="thumb">
+                                            <img src="img/testmonial/author.png" alt="">
+                                            <div class="quote_icon">
+                                                <i class="Flaticon flaticon-quote"></i>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering through animal welfare when people might depend on livestock as their only source of income or food.</p>
+                                            <span>- Micky Mouse</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- /testimonial_area  --
+
+  <div class="brad_area">
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="brad_active owl-carousel">
+                    <div class="single_brand wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                        <img src="img/brand/nsdl.jpg" alt="">
+                    </div>
+                    <div class="single_brand wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <img src="img/brand/MCX_logo.png" alt="">
+                    
+                    </div>
+                    <div class="single_brand wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <img src="img/brand/ncdex.jpg" alt="">
+                    </div>
+                    <div class="single_brand wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <img src="img/brand/sbe.png" alt="">
+                    </div>
+                    <div class="single_brand wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <img src="img/brand/nse.png" alt="">
+                    </div>
+                    <div class="single_brand wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                        <img src="img/brand/BSE.png" alt="">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <hr>
+</div>
+
+  <!-- footer start -->
+  <footer class="footer "  >
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 borderfooter col-md-6 col-lg-3">
+                    <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="footer_logo">
+                            <a href="#">
+                                <img class="logohight" src="./img/Capture-removebg-preview.png" alt="">
+                            </a>
+                        </div>
+                        <p>
+                            Squarventuresfms@gmail.com<br>
+                            +91 83083-19430 <br>
+                            1696,Sadashiv peth ,
+                            near khajina vihir chowk<br>
+                            Tilak road Pune 411030
+                        </p>
+                     
+
+                    </div>
+                </div>
+                <div class="col-xl-2 borderfooter col-md-6 col-lg-3">
+                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
+                        <h3 class="footer_title">
+                            Services
+                        </h3>
+                        <ul>
+                            <li><a href="./mutualfund.html">MUTUAL FUND </a></li>
+                            <li><a href="./fixed_deposit.html">FIXED DEPOSIT </a></li>
+                            <li><a href="./bond.html">BONDS</a></li>
+                            <li><a href="./life_insurance.html">LIFE INSURANCE</a></li>
+                            <li><a href="./demate_account.html">DEMAT & TRADING ACCOUNT</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-xl-2 borderfooter col-md-6 col-lg-2">
+                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
+                        <h3 class="footer_title">
+                            Useful Links
+                        </h3>
+                        <ul>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.protrade.swastikainvestmart">Mobile Trading app</a></li>
+                            <li><a href="https://trading.swastika.co.in/Express5/login">Trading website</a></li>
+                            <li><a href="./Justrade_64.zip">Justrade Pro</a></li>
+                            <li><a href="./contact.html"> Contact</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 borderfooter col-md-6 col-lg-4">
+                    
+                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
+                        <h3 class="footer_title">
+                            Contact us
+                        </h3>
+                        <ul>
+                            <li><h4 >whatsapp </h4><a href="#"> <i class="fa fa-whatsapp"></i> +91 83083-19430</a>
+                                <br></li>
+                                <li><h4 >email </h4><a href="#"> <i class="fa fa-envelope"></i> Squarventuresfms@gmail.com</a>
+                                    <br></li>
+                            
+                        </ul>
+                    </div>
+                        <!---------<h4 style="color:rebeccapurple;">whatsapp </h4>
+                        <h4 style="color:rebeccapurple;"> </h4>
+                        <a href="#"> <i class="fa fa-whatsapp"></i> +91 83083 1943</a>
+                        <br>
+                      
+                        <a href="#"> <i class="fa fa-envelope"></i> +91 83083 1943</a>--->
+                       
+                    
+                    <div class="socail_links">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="ti-facebook" ></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
+        <div class="container">
+            <div class="footer_border"></div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <p class="copy_right text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/ footer end  -->
+
+    <!-- link that opens popup -->
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/slick.min.js"></script>
+
+
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
